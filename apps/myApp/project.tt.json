@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./",
   "projectname": "myApp",
-  "description": "local-taro-app",
+  "description": "taro-mini",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,

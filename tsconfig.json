@@ -3,7 +3,7 @@
     "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -14,16 +14,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "baseUrl": ".",
-    "paths": {
-      "@local-taro-app/utils": ["utils/src"],
-      "@local-taro-app/ui-components": ["packages/ui-components/src"]
-    }
   },
   "include": [
-    "apps/*/src",
-    "packages/*/src",
-    "utils/src"
+    "apps/*",
+    "packages/*",
+    "utils/*"
   ],
   "exclude": [
     "**/node_modules",

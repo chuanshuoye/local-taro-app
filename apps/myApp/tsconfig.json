@@ -1,5 +1,4 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
@@ -23,7 +22,6 @@
       "node_modules/@types"
     ]
   },
-  "include": ["./src", "../../packages/*/src", "../../utils/src"],
-  "exclude": ["node_modules", "dist", "build", ".swc", ".temp"],
+  "include": ["./src", "./types"],
   "compileOnSave": false
 }

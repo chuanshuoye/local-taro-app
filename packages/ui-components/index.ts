@@ -1,3 +1,9 @@
-export * from './components/Button';
-export * from './components/Card';
-export * from './components/SearchBar'; 
+import Card from './components/Card'
+import Button from './components/Button'
+import SearchBar from './components/SearchBar'
+
+export {
+  Card,
+  Button,
+  SearchBar
+} 
