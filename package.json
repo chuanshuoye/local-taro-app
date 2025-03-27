@@ -12,7 +12,7 @@
   "workspaces": [
     "apps/*",
     "packages/*",
-    "utils"
+    "utils/*"
   ],
   "devDependencies": {
     "@babel/plugin-syntax-typescript": "^7.25.9"

@@ -1,6 +1,7 @@
+import React, { useEffect } from 'react'
 import { View, Text, Button } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import React, { useEffect } from 'react'
+import utils from '@local/utils'
 import useCounterStore from '../../store/useCounterStore'
 import './index.scss'
 
@@ -8,6 +9,7 @@ const ZustandDemo: React.FC = () => {
   const { count, increment, decrement, reset } = useCounterStore()
 
   useEffect(() => {
+    console.log(utils.formatDate(new Date()))
     Taro.setNavigationBarTitle({
       title: 'Zustand 状态管理示例'
     })

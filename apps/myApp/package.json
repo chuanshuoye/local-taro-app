@@ -37,6 +37,8 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.21.5",
+    "@local/utils": "workspace:*",
+    "@local/ui-components": "workspace:*",
     "@nutui/nutui-react-taro": "^2.6.14",
     "@tarojs/components": "4.0.9",
     "@tarojs/helper": "4.0.9",
@@ -53,7 +55,6 @@
     "@tarojs/runtime": "4.0.9",
     "@tarojs/shared": "4.0.9",
     "@tarojs/taro": "4.0.9",
-    "@local/ui-components": "workspace:*",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "zustand": "^5.0.3"
@@ -62,6 +63,7 @@
     "@babel/core": "^7.8.0",
     "@babel/plugin-proposal-class-properties": "7.14.5",
     "@babel/preset-react": "^7.24.1",
+    "@babel/preset-typescript": "^7.27.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@tarojs/cli": "4.0.9",
     "@tarojs/taro-loader": "4.0.9",

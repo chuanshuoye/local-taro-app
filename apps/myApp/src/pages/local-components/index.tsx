@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 // 导入本地组件 (通过软链接)
 // 注意：需要先创建软链接才能正常导入

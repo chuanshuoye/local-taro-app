@@ -1,7 +1,4 @@
-import Button from './Button';
-import Card from './Card';
+// 导出所有组件
+export * from './Button';
+export * from './Card';
 
-module.exports = {
-  Button,
-  Card
-}; 

@@ -14,13 +14,21 @@
     "strictNullChecks": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "rootDir": ".",
+    "rootDir": "../..",
     "jsx": "react-jsx",
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": [
       "node_modules/@types"
-    ]
+    ],
+    "paths": {
+      "@local/utils": [
+        "../../utils"
+      ],
+      "@local/ui-components": [
+        "../../packages/ui-components"
+      ]
+    }
   },
   "include": ["./src", "./types"],
   "compileOnSave": false
