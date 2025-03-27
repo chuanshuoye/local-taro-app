@@ -1,0 +1,17 @@
+{
+  "name": "local-taro-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "基于taro脚手架开发H5、小程序多端应用",
+  "scripts": {
+    "dev:weapp": "pnpm --filter myApp dev:weapp",
+    "dev:h5": "pnpm --filter myApp dev:h5",
+    "build:weapp": "pnpm --filter myApp build:weapp",
+    "build:h5": "pnpm --filter myApp build:h5"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "utils"
+  ]
+} 
