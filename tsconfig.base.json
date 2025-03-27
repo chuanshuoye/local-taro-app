@@ -4,10 +4,10 @@
         "rootDir": "./",
         "paths": {
             "@local-taro-app/utils": [
-                "utils/*"
+                "utils"
             ],
             "@local-taro-app/ui-components": [
-                "packages/ui-components/*"
+                "packages/ui-components"
             ]
         }
     }
