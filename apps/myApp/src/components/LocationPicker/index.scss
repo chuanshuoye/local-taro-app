@@ -1,0 +1,23 @@
+.location-picker {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  
+  .location-icon {
+    margin-right: 6px;
+    font-size: 16px;
+  }
+  
+  .location-text {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .location-arrow {
+    font-size: 12px;
+    color: #999;
+    margin-left: 4px;
+  }
+} 

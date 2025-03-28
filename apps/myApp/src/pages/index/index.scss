@@ -5,3 +5,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.car-service-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding-bottom: 70px; // 为底部TabBar留出空间
+}
+
+.service-container {
+  padding: 0 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 0 16px 16px;
+}
