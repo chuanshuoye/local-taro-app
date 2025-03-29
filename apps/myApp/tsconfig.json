@@ -20,7 +20,11 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"]
+    }
   },
-  "include": ["./src", "./types", "mock", "mock", "mock"],
+  "include": ["./src", "./types"],
   "compileOnSave": false
 }

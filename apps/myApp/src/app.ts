@@ -2,12 +2,25 @@ import React, { useEffect } from 'react'
 import { useDidShow, useDidHide } from '@tarojs/taro'
 // 全局样式
 import './app.scss'
-// 导入MSW模拟服务
-import { setupMockService } from './mocks'
 
-// 初始化模拟服务（开发环境）
+// 只在开发环境下初始化模拟服务
 if (process.env.NODE_ENV === 'development') {
-  setupMockService();
+  try {
+    if (process.env.TARO_ENV === 'h5') {
+      // H5环境
+      setTimeout(() => {
+        // 延迟加载避免初始化问题
+        // @ts-ignore - 忽略类型错误
+        require('./mocks/h5-init').setupH5MockService();
+      }, 100);
+    } else {
+      // 小程序环境
+      // @ts-ignore - 忽略类型错误
+      require('./mocks/miniapp-init').setupMiniAppMock();
+    }
+  } catch (err) {
+    console.error('加载模拟服务失败:', err);
+  }
 }
 
 function App(props) {
