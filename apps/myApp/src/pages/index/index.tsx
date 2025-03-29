@@ -2,7 +2,6 @@ import React from 'react'
 import { View, Text, Image } from '@tarojs/components'
 import { ConfigProvider } from '@nutui/nutui-react-taro'
 import zhCN from '@nutui/nutui-react-taro/dist/locales/zh-CN'
-import Taro from '@tarojs/taro'
 import './index.scss'
 
 // 组件导入
@@ -82,7 +81,7 @@ function Index() {
         
         <PromotionSection title='超值特惠' promotions={promotions} />
         
-        <TabBar />
+        {process.env.TARO_ENV === 'h5' && <TabBar />}
       </View>
     </ConfigProvider>
   )
