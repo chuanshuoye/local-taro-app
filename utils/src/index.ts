@@ -3,3 +3,5 @@ export const utils = {
         return date.toLocaleDateString();
     }
 }
+
+export default utils;
