@@ -1,0 +1,102 @@
+.mock-page {
+  padding: 20px;
+  
+  .header {
+    margin-bottom: 30px;
+    
+    .title {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      display: block;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+  
+  .section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    
+    .section-title {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    .action-button {
+      margin-bottom: 15px;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .result-box {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid #eee;
+    }
+    
+    .user-item {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    
+    .product-item {
+      .product-name {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .product-price {
+        display: block;
+        color: #f56c6c;
+        margin-bottom: 5px;
+      }
+      
+      .product-desc {
+        display: block;
+        color: #666;
+        font-size: 14px;
+      }
+    }
+    
+    .login-result {
+      .success-text {
+        display: block;
+        color: #67c23a;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      
+      .error-text {
+        color: #f56c6c;
+        font-weight: bold;
+      }
+      
+      text {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  }
+} 

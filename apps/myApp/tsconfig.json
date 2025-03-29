@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
@@ -13,23 +14,13 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "sourceMap": true,
-    "baseUrl": ".",
-    "rootDir": "../..",
     "jsx": "react-jsx",
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": [
       "node_modules/@types"
     ],
-    "paths": {
-      "@local/utils": [
-        "../../utils"
-      ],
-      "@local/ui-components": [
-        "../../packages/ui-components"
-      ]
-    }
   },
-  "include": ["./src", "./types"],
+  "include": ["./src", "./types", "mock", "mock", "mock"],
   "compileOnSave": false
 }
