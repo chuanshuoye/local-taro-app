@@ -30,10 +30,9 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
     },
     framework: 'react',
     compiler: {
-
-      type: 'webpack5', 
+      type: 'webpack5',
       prebundle: {
-        enable: false
+        enable: false,
       }
     },
     cache: {

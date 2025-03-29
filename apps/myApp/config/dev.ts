@@ -4,6 +4,24 @@ export default {
     quiet: false,
     stats: true
   },
-  mini: {},
-  h5: {}
+  mini: {
+    webpackChain(chain) {
+      chain.module
+          .rule('typescript')
+          .test(/\.(ts|tsx)$/)
+          .use('babel-loader')
+          .loader('babel-loader')
+          .options({ presets: ['@babel/preset-typescript', '@babel/preset-react'] });
+    }
+  },
+  h5: {
+    webpackChain(chain) {
+      chain.module
+          .rule('typescript')
+          .test(/\.(ts|tsx)$/)
+          .use('babel-loader')
+          .loader('babel-loader')
+          .options({ presets: ['@babel/preset-typescript', '@babel/preset-react'] });
+    }
+  }
 } satisfies UserConfigExport<'webpack5'>

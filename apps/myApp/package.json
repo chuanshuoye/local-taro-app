@@ -37,8 +37,8 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.21.5",
-    "@local/utils": "workspace:*",
     "@local/ui-components": "workspace:*",
+    "@local/utils": "workspace:*",
     "@nutui/nutui-react-taro": "^2.6.14",
     "@tarojs/components": "4.0.9",
     "@tarojs/helper": "4.0.9",
@@ -83,6 +83,7 @@
     "postcss": "^8.4.18",
     "react-refresh": "^0.11.0",
     "stylelint": "^14.4.0",
+    "ts-loader": "^9.5.2",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "typescript": "^5.1.0",
