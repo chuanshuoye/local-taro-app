@@ -3,7 +3,9 @@ export default defineAppConfig({
     'pages/index/index',
     'pages/zustand-demo/index',
     'pages/local-components/index',
-    'pages/mock/index'
+    'pages/mock/index',
+    'pages/login/index',
+    'pages/my-service/index'
   ],
   window: {
     backgroundTextStyle: 'light',

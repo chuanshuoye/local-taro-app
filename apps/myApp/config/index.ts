@@ -85,6 +85,23 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
       },
       webpackChain(chain) {
         chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
+        
+        // 设置打包分析
+        if (process.env.ANALYZE === 'true') {
+          chain.plugin('analyzer')
+            .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, []);
+        }
+        
+        // 启用terser压缩
+        chain.optimization.minimizer('terser')
+          .use(require('terser-webpack-plugin'), [{
+            terserOptions: {
+              compress: {
+                drop_console: process.env.NODE_ENV === 'production',
+                drop_debugger: process.env.NODE_ENV === 'production'
+              }
+            }
+          }]);
       }
     },
     rn: {

@@ -161,7 +161,7 @@ $text-color: #333;
 $border-radius: 4px;
 
 // components/Button/index.scss
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as vars;
 
 .custom-button {
   padding: 8px 16px;
