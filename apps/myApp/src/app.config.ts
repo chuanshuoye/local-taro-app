@@ -24,32 +24,20 @@ export default defineAppConfig({
       {
         pagePath: 'pages/index/index',
         text: '首页',
-        iconPath: '',
-        selectedIconPath: ''
-      },
-      {
-        pagePath: 'pages/zustand-demo/index',
-        text: '状态',
-        iconPath: '',
-        selectedIconPath: ''
-      },
-      {
-        pagePath: 'pages/local-components/index',
-        text: '组件',
-        iconPath: '',
-        selectedIconPath: ''
+        iconPath: 'assets/icons/home.png',
+        selectedIconPath: 'assets/icons/home.png'
       },
       {
         pagePath: 'pages/my-service/index',
         text: '服务',
-        iconPath: '',
-        selectedIconPath: ''
+        iconPath: 'assets/icons/service.png',
+        selectedIconPath: 'assets/icons/service.png'
       },
       {
         pagePath: 'pages/profile/index',
         text: '我的',
-        iconPath: '',
-        selectedIconPath: ''
+        iconPath: 'assets/icons/profile.png',
+        selectedIconPath: 'assets/icons/profile.png'
       }
     ]
   }

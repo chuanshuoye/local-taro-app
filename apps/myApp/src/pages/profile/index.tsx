@@ -74,19 +74,21 @@ const Profile: React.FC = () => {
             </View>
           </View>
           
-          {/* 用户名修改弹窗 */}
-          <Dialog
-            title="修改用户名"
-            visible={usernameDialogVisible}
-            onConfirm={confirmUsername}
-            onCancel={() => setUsernameDialogVisible(false)}
-          >
-            <Input 
-              placeholder="请输入用户名"
-              value={inputUsername}
-              onChange={(value) => setInputUsername(value)}
-            />
-          </Dialog>
+          {/* 用户名修改弹窗 - 使用条件渲染 */}
+          {usernameDialogVisible && (
+            <Dialog
+              title="修改用户名"
+              visible={true}
+              onConfirm={confirmUsername}
+              onCancel={() => setUsernameDialogVisible(false)}
+            >
+              <Input 
+                placeholder="请输入用户名"
+                value={inputUsername}
+                onChange={(value) => setInputUsername(value)}
+              />
+            </Dialog>
+          )}
           
           <View className='info-item' onClick={() => setGenderPickerVisible(true)}>
             <Text className='label'>性别</Text>
@@ -96,15 +98,17 @@ const Profile: React.FC = () => {
             </View>
           </View>
           
-          {/* 性别选择器 */}
-          <Picker
-            visible={genderPickerVisible}
-            options={[GENDER_OPTIONS]}
-            defaultValue={[gender]}
-            onClose={() => setGenderPickerVisible(false)}
-            onConfirm={(list, values) => confirmGenderPicker(list, values)}
-            title="请选择性别"
-          />
+          {/* 性别选择器 - 使用条件渲染 */}
+          {genderPickerVisible && (
+            <Picker
+              visible={true}
+              options={[GENDER_OPTIONS]}
+              defaultValue={[gender]}
+              onClose={() => setGenderPickerVisible(false)}
+              onConfirm={(list, values) => confirmGenderPicker(list, values)}
+              title="请选择性别"
+            />
+          )}
           
           <View className='info-item' onClick={() => setDatePickerVisible(true)}>
             <Text className='label'>出生日期</Text>
@@ -114,15 +118,17 @@ const Profile: React.FC = () => {
             </View>
           </View>
           
-          {/* 日期选择器 */}
-          <DatePicker
-            visible={datePickerVisible}
-            title="请选择出生日期"
-            onClose={() => setDatePickerVisible(false)}
-            onConfirm={confirmDatePicker}
-            startDate={new Date(1950, 0, 1)}
-            endDate={new Date()}
-          />
+          {/* 日期选择器 - 使用条件渲染 */}
+          {datePickerVisible && (
+            <DatePicker
+              visible={true}
+              title="请选择出生日期"
+              onClose={() => setDatePickerVisible(false)}
+              onConfirm={confirmDatePicker}
+              startDate={new Date(1950, 0, 1)}
+              endDate={new Date()}
+            />
+          )}
           
           <View className='info-item'>
             <Text className='label'>联系电话</Text>
@@ -150,14 +156,14 @@ const Profile: React.FC = () => {
           <Cell
             className='protocol-item'
             title='《XX用户协议》'
-            isLink
+            extra={<Text className='arrow'>{'>'}</Text>}
             onClick={() => {}}
           />
           
           <Cell
             className='protocol-item'
             title='《隐私协议》'
-            isLink
+            extra={<Text className='arrow'>{'>'}</Text>}
             onClick={() => {}}
           />
         </View>

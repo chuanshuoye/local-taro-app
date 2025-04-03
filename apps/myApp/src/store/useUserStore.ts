@@ -1,5 +1,19 @@
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
+import Taro from '@tarojs/taro'
+
+// 自定义微信小程序存储适配器
+const taroStorage = {
+  getItem: (name) => {
+    return Taro.getStorageSync(name)
+  },
+  setItem: (name, value) => {
+    Taro.setStorageSync(name, value)
+  },
+  removeItem: (name) => {
+    Taro.removeStorageSync(name)
+  }
+}
 
 interface UserState {
   // 用户基础信息
@@ -58,14 +72,8 @@ const useUserStore = create<UserState>()(
     }),
     {
       name: 'user-storage',
-      storage: createJSONStorage(() => localStorage),
-      partialize: (state) => ({
-        username: state.username,
-        phone: state.phone,
-        gender: state.gender,
-        birthday: state.birthday,
-        isLoggedIn: state.isLoggedIn
-      })
+      // 使用自定义的微信小程序存储适配器
+      storage: createJSONStorage(() => taroStorage)
     }
   )
 )
