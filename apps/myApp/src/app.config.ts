@@ -6,7 +6,8 @@ export default defineAppConfig({
     'pages/mock/index',
     'pages/login/index',
     'pages/my-service/index',
-    'pages/profile/index'
+    'pages/profile/index',
+    'pages/car-wash-verification/index'
   ],
   window: {
     backgroundTextStyle: 'light',
