@@ -29,7 +29,7 @@ export default defineAppConfig({
       },
       {
         pagePath: 'pages/zustand-demo/index',
-        text: '状态管理',
+        text: '状态',
         iconPath: '',
         selectedIconPath: ''
       },
@@ -40,14 +40,14 @@ export default defineAppConfig({
         selectedIconPath: ''
       },
       {
-        pagePath: 'pages/mock/index',
-        text: '数据',
+        pagePath: 'pages/my-service/index',
+        text: '服务',
         iconPath: '',
         selectedIconPath: ''
       },
       {
         pagePath: 'pages/profile/index',
-        text: '个人中心',
+        text: '我的',
         iconPath: '',
         selectedIconPath: ''
       }

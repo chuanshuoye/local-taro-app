@@ -4,7 +4,7 @@ import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import devConfig from './dev'
 import prodConfig from './prod'
 
-console.log(path.resolve(__dirname, "../../../packages/ui-components"))
+// console.log(path.resolve(__dirname, "../../../packages/ui-components"))
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
   const baseConfig: UserConfigExport<'webpack5'> = {
@@ -56,6 +56,9 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
       },
       webpackChain(chain) {
         chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
+      },
+      miniCssExtractPluginOption: {
+        ignoreOrder: true
       }
     },
     h5: {

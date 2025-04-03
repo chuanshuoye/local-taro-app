@@ -69,12 +69,12 @@ export default {
        * 使用 webpack-bundle-analyzer 插件对打包体积进行分析
        * @docs https://github.com/webpack-contrib/webpack-bundle-analyzer
        */
-      chain.plugin('analyzer')
-        .use(BundleAnalyzerPlugin, [{
-          analyzerMode: 'static',
-          openAnalyzer: false,
-          reportFilename: 'report.html'
-        }]);
+      // chain.plugin('analyzer')
+      //   .use(BundleAnalyzerPlugin, [{
+      //     analyzerMode: 'static',
+      //     openAnalyzer: false,
+      //     reportFilename: 'report.html'
+      //   }]);
     }
   }
 } satisfies UserConfigExport<'webpack5'>
