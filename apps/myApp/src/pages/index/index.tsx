@@ -5,22 +5,12 @@ import zhCN from '@nutui/nutui-react-taro/dist/locales/zh-CN'
 import './index.scss'
 
 // 组件导入
-import Header from '../../components/Header'
-import LocationPicker from '../../components/LocationPicker'
 import Banner from '../../components/Banner'
 import ServiceGrid from '../../components/ServiceGrid'
 import PromotionSection from '../../components/PromotionSection'
 import TabBar from '../../components/TabBar'
 
 function Index() {
-  // 地理位置数据
-  const location = {
-    city: '上海城区松江区',
-    onChange: () => {
-      console.log('切换位置')
-    }
-  }
-
   // 服务项目第一行数据
   const servicesRow1 = [
     { id: 1, icon: '🚗', title: '标准洗车' },
@@ -70,8 +60,6 @@ function Index() {
   return (
     <ConfigProvider locale={zhCN}>
       <View className='car-service-page'>
-        <Header title='小鲨车服' />
-        <LocationPicker location={location} />
         <Banner />
         
         <View className='service-container'>

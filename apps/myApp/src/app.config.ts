@@ -5,7 +5,8 @@ export default defineAppConfig({
     'pages/local-components/index',
     'pages/mock/index',
     'pages/login/index',
-    'pages/my-service/index'
+    'pages/my-service/index',
+    'pages/profile/index'
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -40,6 +41,12 @@ export default defineAppConfig({
       {
         pagePath: 'pages/mock/index',
         text: '数据',
+        iconPath: '',
+        selectedIconPath: ''
+      },
+      {
+        pagePath: 'pages/profile/index',
+        text: '个人中心',
         iconPath: '',
         selectedIconPath: ''
       }
